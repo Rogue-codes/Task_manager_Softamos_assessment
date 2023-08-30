@@ -5,6 +5,7 @@ import { addTask, updateTask } from "../../store/reducers/TaskSlice";
 
 interface TaskAddProps {
   setTaskName: React.Dispatch<React.SetStateAction<string>>;
+  setType:React.Dispatch<React.SetStateAction<string>>;
   taskInfo: TaskTypes;
   type: string;
   updatedTask: TaskTypes;
@@ -16,6 +17,7 @@ export default function TaskAdd({
   type,
   updatedTask,
   setUpdatedTask,
+  setType
 }: TaskAddProps) {
   const dispatch = useDispatch();
 
@@ -25,6 +27,7 @@ export default function TaskAdd({
       : dispatch(addTask(taskInfo));
     setTaskName("");
     setUpdatedTask({ ...updatedTask, taskName: "" });
+    setType("")
   };
   return (
     <div>

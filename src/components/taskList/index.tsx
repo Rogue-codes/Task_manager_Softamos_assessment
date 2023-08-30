@@ -63,11 +63,11 @@ export default function TaskList({ handleUpdate, searchQuery }: TaskListProps) {
   // console.log(task);
   return (
     <div className="mt-3">
-      <div className="w-full flex justify-between gap-4 items-center">
+      <div className="w-full flex !justify-between items-center">
         <Tab setActiveTab={setActiveTab} activeTab={activeTab} />
-        <div className="w-[10rem] p-3 mt-8 relative z-30">
+        <div className="w-[10rem] flex justify-end items-center p-3 mt-8 relative z-30">
           <button
-            className="flex justify-start items-center gap-2 text-sm lg:text-md lg:gap-5"
+            className="flex items-center gap-2 text-sm lg:text-md lg:gap-5"
             onClick={() => setShowSortDrpDown(!showSortDrpDown)}
           >
             <Sort size="20" color="#201F1E" />{" "}

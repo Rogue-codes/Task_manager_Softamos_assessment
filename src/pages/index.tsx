@@ -43,6 +43,7 @@ export default function Home() {
           type={type}
           updatedTask={updatedTask}
           setUpdatedTask={setUpdatedTask}
+          setType={setType}
         />
         <TaskList searchQuery={searchQuery} handleUpdate={handleUpdate} />
       </div>
