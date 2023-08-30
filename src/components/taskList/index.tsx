@@ -118,11 +118,16 @@ export default function TaskList({ handleUpdate, searchQuery }: TaskListProps) {
                     onClick={() => toggleTaskStatus(task.id)}
                   >
                     {task.isCompleted && (
-                      <TickSquare   variant="Bold" className="text-white text-sm lg:text-md" />
+                      <TickSquare
+                        variant="Bold"
+                        className="text-white text-sm lg:text-md"
+                      />
                     )}
                   </div>
                   <div>
-                    <p className="truncate w-40 lg:w-80 text-sm lg:text-md">{task.taskName}</p>
+                    <p className="truncate w-40 lg:w-80 text-sm lg:text-md">
+                      {task.taskName}
+                    </p>
                     <p className="text-xs lg:text-md">{task.date}</p>
                   </div>
                 </div>
